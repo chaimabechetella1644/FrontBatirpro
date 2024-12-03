@@ -1,0 +1,19 @@
+.CartFixedRightContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+    background-color: #ea55011c;
+    font-weight: bold;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 125px;
+    width: 212px;
+}
+.rightTotal span{
+    color: var(--main-color1);
+}
+.rightTitle{
+    font-size: 22px;
+}

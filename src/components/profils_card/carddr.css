@@ -1,0 +1,84 @@
+
+
+
+.profil_card .card1 {
+    width: 255px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: var(--main-color2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY 0.5;
+   
+}
+
+.profil_card .card1:hover {
+    transform: translateY(-10px);
+}
+
+.profil_card .card1 .top {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 40%;
+    
+}
+
+.profil_card .card1 .color {
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(135deg, #ff5a00, #c45000);
+    position: relative;
+    top: 0px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 50%, 0% 100%);
+    border-radius: 5px;
+}
+
+.profil_card .card1 .img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.profil_card .card1 .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.profil_card .card1 .information {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.profil_card .card1 .text1 {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex-wrap: nowrap;
+    padding: 14px;
+}
+
+.profil_card .card1 .information img {
+    width: 20px;
+    height: 20px;
+}
+
+.profil_card .rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.profil_card .rate img {
+    width: 16px;
+    height: 16px;
+}

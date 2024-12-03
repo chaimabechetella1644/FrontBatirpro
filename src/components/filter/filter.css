@@ -1,0 +1,154 @@
+.filter{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 49px;
+    margin-right: 38px;
+    margin-bottom: 175px;
+    padding: 46px; */
+    gap: 56px;
+    position: relative;
+    font-weight: bold;
+}
+
+.filter .title h1{
+  margin-bottom: -22px;
+}
+.filterprix{
+    position: relative;
+}
+
+.casescontainer{
+  height: 68px;
+  width: 100%;
+  overflow: scroll;
+}
+.casescontainer::-webkit-scrollbar {
+  display: none;
+}
+/* .filter .cases::-webkit-scrollbar {
+  display: none;
+} */
+.filter .cases{
+    display: flex;
+    gap: 26px;
+    /* overflow-x: scroll; */
+}
+
+ filter .cases{
+  width: 100%;
+}
+
+.filter .cases .title{
+    border-radius: 20px;
+    background-color: var(--main-color2);
+    display: flex;
+    height: 23px;
+    padding: 7px 17px;
+    justify-content: center;
+    align-items: center;
+}
+.filter .cases .title:hover{
+    cursor: pointer;
+}
+
+
+
+.filter  .hover  {
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #BED5B9;
+    top: 44px;
+    left: 27px;
+    
+  }
+  .filter  .hover   .etoile{
+    width: 33px;
+    height: 33px;
+    transform: rotate(-45deg);
+    background-color: white;
+    margin-bottom: -33px;
+    margin-left: 17px;
+    position: relative;
+    z-index: 90;
+    background-color: var(--main-color1x);
+  }
+
+
+  
+  .filter  .hover   .car{
+    display: inline-flex;
+    padding: 7px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    position: relative;
+    z-index: 100;
+  }
+  
+  .filter  .hover   .car a, .filter ul li{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 33px;
+   
+  }
+  .filter  .hover   .car a:hover{
+    background-color: var(--main-color1);
+    cursor: pointer;
+  }
+  .filter ul li:hover{
+    background-color: var(--main-color1);
+    color: white;
+    cursor: pointer;
+  }
+  .filter  .hover   .car  a{
+    text-decoration: none;
+    color: black;
+  }
+ 
+  .filter ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  .filter ul li{
+    width: 97px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+  }
+  .special{
+    color: var(--main-secondcolor);
+  }
+  .title span{
+    margin-top: 5px;
+    margin-left: 9px;
+  }
+  .title span img{
+    width: 13px;
+  }
+
+
+  .filtercards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardcont .content{    
+    background-color: var(--main-color2);;
+    width: 210px;
+  }
+
+  .filter .cardcont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 39px;
+  }

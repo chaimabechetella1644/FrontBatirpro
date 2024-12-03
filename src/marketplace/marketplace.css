@@ -1,0 +1,26 @@
+.marketPlaceContainer{
+    padding: 0px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+}
+.marketPlaceCardBar{
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+}
+.marketPlaceCards{
+    width: 100%;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.titleMarketplace{
+    /* padding: 0 54px; */
+    color: var(--main-secondcolor);
+    font-size: 29px;
+    font-weight: bold;
+    width: 100%;
+}

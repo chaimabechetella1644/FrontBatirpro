@@ -1,0 +1,39 @@
+
+.navbar_admin {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 220px;
+    height: 100vh;
+    background-color: var(--main-color2);
+    font-weight: bold;
+}
+.navbar_admin .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.navbar_admin .logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* .navbar_admin .info_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+} */
+
+.navbar_admin a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+

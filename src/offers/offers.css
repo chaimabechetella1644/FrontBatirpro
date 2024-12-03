@@ -1,0 +1,28 @@
+.offersContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    
+}
+.offerPageTitle{
+    padding: 0 54px;
+    color: var(--main-secondcolor);
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.offerCardsBar{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.offerBar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;        
+    justify-content: center;
+    padding: 0 13px;
+    align-items: center;
+    gap: 40px;
+}

@@ -1,0 +1,36 @@
+.table-container {
+    width: 90%;
+    border-collapse: collapse;
+    font-weight: bold   ;
+}
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container th,
+.table-container td {
+    text-align: center;
+    padding: 18px;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+}
+.table-container th {
+    text-transform: capitalize;
+}
+.table-container button {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: var(--main-color1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.table-container button:hover {
+    background-color: var(--hoverColor);
+}
+.table-container .delete{
+    background-color: red;
+    color: white;
+}

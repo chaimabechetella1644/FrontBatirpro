@@ -1,0 +1,39 @@
+.profilesContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+.leftProfileContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: flex-start;
+}
+.profilesContainer .profileTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 33px;
+    font-weight: bold;
+    padding: 56px 0 0;
+}
+
+/* .leftProfileContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: flex-start;
+    margin-left: 337px;
+}
+.profilesContainer .profileTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77%;
+    font-size: 33px;
+    font-weight: bold;
+    padding: 56px 0 0;
+} */

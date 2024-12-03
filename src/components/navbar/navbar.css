@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100;1,200;1,500&display=swap');
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+:root {
+    --main-color1 : #EA5501 ;
+    --main-color2 : #D9D9D9 ;
+    --main-secondcolor : #15191E ;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color2);
+    width: 100%;
+    height: 65px; 
+    position: relative; 
+}
+
+.navbar_left {
+    width: 25%;
+    height: 40px;
+    background-color: var(--main-color1);
+    position: relative; 
+    
+    
+}
+
+.navbar_left::after {
+    content: "";
+    width: 0px;
+    height: 0px; 
+    border-top: 20px solid var(--main-color1);
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid var(--main-color1);
+    border-right: 20px solid transparent ;
+    position: absolute; 
+    left: 100%;
+
+}
+
+.navbar_right {
+    width: 70%;
+    height:  40px;
+    background-color: var(--main-secondcolor);
+    position: relative;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.navbar_right::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid var(--main-secondcolor);
+    border-left: 20px solid transparent;
+    border-right: 20px solid var(--main-secondcolor) ;
+    position: absolute; 
+    right: 100%
+}
+
+.navbar_right .info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; 
+}
+
+.navbar_right .info ul {
+    display: flex;
+    color: white;
+    list-style: none;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar_right .info ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_right .info ul li:hover {
+    color: var(--main-color1);
+}
+
+.navbar_right .info button {
+    background-color: var(--main-color1);
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar_right .info .icons {
+    display: flex;
+    align-items: center
+    
+}
+
+.navbar_right .info .icons div {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.navbar_right .info .icons div img {
+    width: 100%;
+    height: 100%;
+}

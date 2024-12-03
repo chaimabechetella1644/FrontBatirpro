@@ -1,0 +1,107 @@
+
+
+.my_profils {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.my_profils .personal_information {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.my_profils .personal_information .my_informations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my_profils .personal_information .my_informations .About_me {
+    background-color: var(--main-color2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-radius: 5px;
+    width: 92%;
+    transform: translateY 0.5;
+}
+
+.my_profils .personal_information .my_informations .About_me:hover {
+    transform: translateY(-10px);
+}
+
+
+.my_profils .personal_information .my_informations .About_me p {
+    text-align: center;
+}
+
+.my_profils .button {
+    display: flex;
+    justify-content: center;
+}
+
+.my_profils .button button {
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color1);
+    color: white;
+    padding: 10px 4px;
+
+}
+
+
+.carte_publication {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    background-color: var(--main-color2);
+    border-radius: 5px;
+    padding: 17px;
+}
+
+
+.carte_publication .header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+
+}
+
+.carte_publication .header p {
+    font-weight: bold;
+}
+
+.carte_publication .header .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.carte_publication .header .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.carte_publication .middle {
+    width: 100%;
+    height: 190px;
+}
+.carte_publication .middle img {
+    width: 100%;
+    height: 100%;
+}
+
+.carte_publication .text p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}

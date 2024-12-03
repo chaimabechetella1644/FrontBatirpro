@@ -1,0 +1,67 @@
+
+.demmande_page {
+    display: flex;
+
+}
+
+.demmande_page .demmande_page_left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.demmande_page .demmande_page_left .perso_info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: var(--main-color2);
+    border-radius: 5px;
+    padding: 15px 25px;
+    gap: 25px;
+}
+.demmande_page .demmande_page_left .perso_info .class {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:27px ;
+}
+.demmande_page .demmande_page_left .perso_info  .title {
+    color: rgba(21, 25, 30, 0.64);
+    font-weight: bold;
+    text-transform: capitalize;
+} 
+
+.demmande_page .demmande_page_left .perso_info .info {
+    font-weight: bold;
+} 
+
+.demmande_page_left h1 {
+    text-transform: capitalize;
+}
+.demmande_page_left h2 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.demmande_page .demmande_page_left .button {
+    display: flex;
+    gap: 80px;
+}
+
+.demmande_page .demmande_page_left .button button {
+    border: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.demmande_page .demmande_page_left .button .Validate {
+    background-color: var(--main-color1);
+}
+
+.demmande_page .demmande_page_left .button .Delete {
+    background-color: #E00000;
+}

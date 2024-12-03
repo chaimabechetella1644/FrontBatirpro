@@ -1,0 +1,29 @@
+.textContainer textarea{
+    width: 200px;
+    height: 120px;
+    padding: 16px;
+    color: white;
+    background-color: transparent;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid #B69B7D;
+}
+.textContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 83px;
+    height: 229px;
+}
+.labelText{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.labelText label::after{
+    content: '';
+    display: block;
+    width: 85px;
+    height: 2px;
+    background-color: var(--main-color1);
+}

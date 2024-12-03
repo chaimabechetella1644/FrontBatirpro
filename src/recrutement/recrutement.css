@@ -1,0 +1,63 @@
+.rec{
+    flex-direction: row !important;
+}
+.loginCard {
+    height: 486px !important;
+    width: 765px !important;
+    gap: 38px !important;
+}
+.logincardBackground {
+    top: 10% !important;
+}
+
+.stepNames{
+    display: flex;
+    flex-direction: column;
+}
+.hereNames{
+    display: flex;
+    color: white;
+    gap: 60px;
+}
+.hereNames .name{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hereNames .name hr{
+    width: 66px;
+    background-color: var(--main-color1);
+}
+.bulls{
+    display: flex;
+    gap: 43px;
+}
+.bulls .bull{
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+}
+
+.buttonRec{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.buttonRec button{
+    background-color: var(--main-color1);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    width: 71px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    cursor: pointer;
+}

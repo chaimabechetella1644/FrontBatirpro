@@ -1,0 +1,42 @@
+
+
+.footer {
+    margin-top: 100px;
+    background-color: #15191E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 235px;
+}
+
+.footer .reseau_sociaux {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.footer .reseau_sociaux img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer .text {
+    width: 245px;
+    text-align: center;
+}
+.footer .text h1 {
+    color: var(--main-color1);
+}
+.footer .text p {
+    color: white;
+}
+
+.footer .list ul{
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+
+.footer .list h1 {
+    color: var(--main-color1);
+}

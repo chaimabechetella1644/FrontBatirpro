@@ -1,0 +1,48 @@
+
+
+.perso_info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: var(--main-color2);
+    border-radius: 5px;
+    padding: 15px 25px;
+    gap: 25px;
+}
+.perso_info .class {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:27px ;
+}
+.perso_info .class1 .title {
+    color: rgba(21, 25, 30, 0.64);
+    font-weight: bold;
+    text-transform: capitalize;
+} 
+
+.perso_info .class1 .info {
+    font-weight: bold;
+} 
+
+.perso_info .class1 input {
+    margin-left: auto;
+    border: none;
+}
+
+.perso_info .class1 input:focus {
+    outline: none;     
+  }
+
+
+.perso_info .haut {
+    display: flex;
+    justify-content: space-around;
+}
+
+.perso_info .haut button {
+    width: 65px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+}

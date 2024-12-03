@@ -1,0 +1,11 @@
+.DemandsContainer{
+    display: flex;
+}
+.DemandsContainer .tableDemands{
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    width: 78%;
+    margin: 60px auto;
+    align-items: center;
+}

@@ -1,0 +1,176 @@
+.panier{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* margin-bottom: 142px; */
+    font-weight: bold;
+    gap: 84px;
+}
+.panier table{
+    text-align: center;
+}
+.panier>.paniertit{
+    font-family: 'Aclonica', sans-serif;
+    padding-top: 50px;
+    font-size: 30px;
+}
+.panier>.paniercontent{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    gap: 12%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.panier>.paniercontent>.right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.panier>.paniercontent>.right>.fixedright{
+    border: 1px solid;
+    padding: 20px 60px 20px 60px;
+    border-color: var(--main-secondcolor);
+    background-color: #ea55011c;
+    border-radius: 12px;
+    /* position: fixed; */
+    display: flex;
+    gap: 27px;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.panier>.paniercontent>.right>.fixedright>h3{
+    font-size: 20px;
+    
+}
+.panier>.paniercontent>.right>.fixedright>.lables{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.panier>.paniercontent>.right>.fixedright>.lables>p{
+    margin: 0px;
+}
+.panier>.paniercontent>.right>.fixedright>.total>div{
+    font-family: 'Aclonica', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.panier>.paniercontent>.right>.fixedright>.total>div>p{
+    margin: 0px;
+    font-size: 20px;
+    color: var(--main-color1);
+}
+.panier>.paniercontent>.right>.fixedright>.bouttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.panier>.paniercontent>.right>.fixedright>.bouttons>button{
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    padding: 7px 13px 7px 13px;
+    background-color: var(--main-color1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+.panier>.paniercontent>.right>.fixedright>.bouttons>button:hover{
+    /* background-color: #bed5b9d0; */
+    cursor: pointer;
+}
+
+.panier>.paniercontent>.left{
+    width: 45%;
+    
+}
+.panier>.paniercontent>.left>table{
+    width: 100%;
+    
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.delet{
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.delet:hover{
+    cursor: pointer;
+    
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.delet>img{
+    /* height: 15px;
+    width: 15px; */
+}
+    
+
+.panier>.paniercontent>.left>table>tbody>tr>td,.panier>.paniercontent>.left>table>thead>tr>th {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 0px 10px 0px;
+}
+.panier>.paniercontent>.left>table>thead>tr>th{
+    font-family: 'Aclonica', sans-serif ;
+    text-align: left;
+}
+.panier>.paniercontent>.left>table>tbody>tr>.plusmoin{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 60px;
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.moin,.panier>.paniercontent>.left>table>tbody>tr>td>.plus{
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.moin:hover,.panier>.paniercontent>.left>table>tbody>tr>td>.plus:hover{
+    cursor: pointer;
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.moin>img,.panier>.paniercontent>.left>table>tbody>tr>td>.plus>img{
+    height: 20px;
+    width: 20px;
+}
+.panier>.paniercontent>.left>table>tbody>tr>.pricediv{
+    text-align: center;
+    font-size: 15px;
+}
+.panier>.paniercontent>.left>table>tbody>tr>td>.price{
+    color: rgb(105, 103, 103);
+}
+.panier>.card-delete{
+    left: 0px;
+    right: 0px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.491);
+    position: fixed;
+}
+
+.imageBrique img{
+    height: 60px;
+    width: 70px;
+}
+
+.buttonDel img{
+    height: 15px;
+    width: 15px;
+}

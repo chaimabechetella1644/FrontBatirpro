@@ -1,0 +1,48 @@
+
+.OrderInfoValidate {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* background-color: var(--main-color2); */
+    width: fit-content;
+    padding: 25px 15px;
+    border: 2px solid var(--main-color2);
+    border-radius: 5px;
+}
+
+.OrderInfoValidate h1 {
+    text-transform: capitalize;
+}
+
+.OrderInfoValidate .order_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.OrderInfoValidate .order_info .info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.OrderInfoValidate .button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.OrderInfoValidate .button button {
+    border: none;
+    padding: 5px 14px;
+    border-radius: 5px;
+    background-color: var(--main-color1);
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.OrderInfoValidate .button .delete {
+    background-color: #E00000;
+}

@@ -1,0 +1,94 @@
+.loginContainer{
+    position: relative;
+}
+.loginbackground{
+    height: 100vh;
+    background-image: url('./images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logincardBackground{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+}
+.loginCard{
+    background-color: #15191E;
+    opacity: 84%;
+    height: 395px;
+    width: 648px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 5px;
+    padding: 39px;
+    justify-content: center;
+}
+.loginContainer .logintitle{
+    color: white;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+.loginContainer .logininputs{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.loginContainer .logininputs input, .loginContainer .loginconnectButtons .loginconnectone, .loginContainer .loginconnectButtons .logingoogleone{
+    background-color: transparent;
+    border-radius: 17px;
+    font-weight: 900;
+    color: white;
+}
+.loginContainer .logininputs input, .loginContainer .loginconnectButtons .logingoogleone{
+    border: 1px solid #B69B7D;
+
+}
+.loginContainer .logininputs input{
+    width: 284px;
+    padding: 11px 25px;
+}
+.loginContainer .loginconnectButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.loginContainer .loginconnectButtons .loginconnectone{
+    background-color: #EA5501;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    width: 284px;
+    padding: 11px 25px;
+}
+
+.loginContainer .logingoogleone{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px;
+    width: 320px;
+    cursor: pointer;
+}
+.loginContainer .logincardBackground .loginsign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginContainer .logincardBackground .loginsign a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}

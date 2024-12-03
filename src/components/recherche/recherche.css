@@ -1,0 +1,45 @@
+
+.inputs{
+    display: flex;
+    align-items: center;
+    gap: 38px;        
+    padding: 0 85px;
+
+}
+.nom{
+    display: flex;
+}
+.underNom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    z-index: 1;
+    width: 50px;
+}
+
+.nom input {
+    background-color: var(--main-color2);
+    margin-left: -48px;
+    padding-left: 64px;
+    border-radius: 5px;
+    z-index: 0;
+    color: var(--main-secondcolor);
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 8px; 
+    cursor: pointer;
+    border-radius: 4px; 
+    font-weight: bold;
+    width: 110px;
+}

@@ -1,0 +1,53 @@
+
+.leftInput{
+    display: flex;
+    align-items: center;
+    gap: 59px;
+    justify-content: center;
+}
+
+.leftInput input{
+    width: 184px;
+    padding: 8px 13px;
+    border-radius: 17px;
+    color: black;
+    font-weight: bold;
+    border: 1px solid var(--main-color1);
+}
+
+.Cartfixedleft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+}
+.cartTextContainer textarea{
+    padding: 8px 13px;
+    border-radius: 17px;
+    color: black;
+    border: 1px solid var(--main-color1);
+    height: 127px;
+    width: 200px;
+    font-weight: bold;
+}
+
+.orderNow button{
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color1);
+    color: white;
+    width: 90px;
+    height: 31px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hireInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
