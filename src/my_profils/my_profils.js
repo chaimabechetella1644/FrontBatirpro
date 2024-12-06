@@ -7,7 +7,8 @@ import like_image from './image/Vector.png'
 import './my_profils.css'
 import Review from '../components/review/review';
 import Addreview from '../components/addreview/addreview';
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
+import axios from 'axios';
 
 export function My_Profils() {
     const location = useLocation();
@@ -17,6 +18,7 @@ export function My_Profils() {
     const user_name = searchParams.get('user_name');
     const num_tlfn = searchParams.get('num_tlfn');
     const address = searchParams.get('address');
+
 
     // Ensure useState is always called here, unconditionally
     const [diplay, setdisplay] = useState({

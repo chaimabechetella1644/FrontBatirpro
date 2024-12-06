@@ -2,6 +2,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './login/Login';
+import Register from './register/Login';
 import Offers from './offers/Offers';
 import Marketplace from './marketplace/Marketplace';
 import Recrutement from './recrutement/Recrutement';
@@ -30,6 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/recrutement" element={<Recrutement />} />
