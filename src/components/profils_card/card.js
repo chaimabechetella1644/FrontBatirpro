@@ -6,9 +6,9 @@ import etoile from './images/etoile.png'
 import etoile_plein from './images/etoile (1).png'
 import './carddr.css'
 
-export  function Card2({ imgSrc, user_name, num_tlfn, address }) {
+export  function Card2({ imgSrc, user_name, num_tlfn, address ,rating}) {
     
-    const StarRating = ({ rating }) => {
+    const StarRating = ({rating}) => {
         const stars = Array(5).fill(etoile).map((star, index) => 
             index < rating ? etoile_plein : etoile
         );
@@ -21,7 +21,8 @@ export  function Card2({ imgSrc, user_name, num_tlfn, address }) {
         );
     };
 
-    const x = 5;
+    const roundedRating = Math.round(rating);
+    console.log(roundedRating)
     return(
         <div className="profil_card">
             <div className="card1">
@@ -31,7 +32,7 @@ export  function Card2({ imgSrc, user_name, num_tlfn, address }) {
                         <img src={imgSrc}  />
                     </div>
                 </div>
-                <StarRating rating={x} />
+                <StarRating rating={roundedRating} />
                 <div className="text1">
                     <div className='information'>
                         <img src={user_icons}/>

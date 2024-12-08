@@ -21,6 +21,8 @@ import panier from '../components/navbar/image/panier.png'
 import favoris from '../components/navbar/image/favori.png'
 import card_image from '../components/home_card/image/5b8d8c75254d0c3a1bee5db241af2a89.jpg'
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from "axios";
 
 export default function Home() {
 
@@ -50,7 +52,25 @@ export default function Home() {
             });
         };
     
-
+// geting the products and profils when the page is loaded
+const [products, setProducts] = useState([]);
+const [profs, setProfs] = useState([]);
+const [loading, setLoading] = useState(true); // State to handle loading
+const [error, setError] = useState(null);
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/home/products/'); 
+                setProducts(response.data.products);
+                setProfs(response.data.professionals)
+                setLoading(false);
+            } catch (err) {
+                setError(err.message);
+                setLoading(false);
+            }
+        };
+        fetchProducts()
+    },[]);
 
     const items = [
         {
@@ -91,64 +111,64 @@ export default function Home() {
 
 
 
-    const cardData = [
-        {
-            imgSrc: card_image,
-            user_name: "bouhafs imane",
-            num_tlfn: "062695753",
-            address: 'bejaia',
-            description: "Je suis un constructeur de chantier, responsable de la coordination."
-        },
-        {
-            imgSrc: card_image,
-            user_name: "bouhafs imane",
-            num_tlfn: "062695753",
-            address: 'bejaia',
-            description: "Je suis un constructeur de chantier, responsable de la coordination."
-        },
-        {
-            imgSrc: card_image,
-            user_name: "Ganoun Dihia",
-            num_tlfn: "062695753",
-            address: 'bejaia',
-            description: "Je suis un constructeur de chantier, responsable de la coordination."
-        },
-        {
-            imgSrc: card_image,
-            user_name: "Ganoun Dihia",
-            num_tlfn: "062695753",
-            address: 'bejaia',
-            description: "Je suis un constructeur de chantier, responsable de la coordination."
-        },
-    ];
+    // const cardData = [
+    //     {
+    //         imgSrc: card_image,
+    //         user_name: "bouhafs imane",
+    //         num_tlfn: "062695753",
+    //         address: 'bejaia',
+    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
+    //     },
+    //     {
+    //         imgSrc: card_image,
+    //         user_name: "bouhafs imane",
+    //         num_tlfn: "062695753",
+    //         address: 'bejaia',
+    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
+    //     },
+    //     {
+    //         imgSrc: card_image,
+    //         user_name: "Ganoun Dihia",
+    //         num_tlfn: "062695753",
+    //         address: 'bejaia',
+    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
+    //     },
+    //     {
+    //         imgSrc: card_image,
+    //         user_name: "Ganoun Dihia",
+    //         num_tlfn: "062695753",
+    //         address: 'bejaia',
+    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
+    //     },
+    // ];
 
 
-    const back = [
-        {
-            image : image ,
-            description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            productName: 'Brique',
-            price : '100 '
-        },
-        {
-            image : image ,
-            description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            productName: 'Brique',
-            price : '100 '
-        },
-        {
-            image : image ,
-            description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            productName: 'Brique',
-            price : '100 '
-        },
-        {
-            image : image ,
-            description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            productName: 'Brique',
-            price : '100 '
-        }
-    ]
+    // const back = [
+    //     {
+    //         image : image ,
+    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    //         productName: 'Brique',
+    //         price : '100 '
+    //     },
+    //     {
+    //         image : image ,
+    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    //         productName: 'Brique',
+    //         price : '100 '
+    //     },
+    //     {
+    //         image : image ,
+    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    //         productName: 'Brique',
+    //         price : '100 '
+    //     },
+    //     {
+    //         image : image ,
+    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    //         productName: 'Brique',
+    //         price : '100 '
+    //     }
+    // ]
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -188,7 +208,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
+{/* hna ybda l front */}
             </div>
             <div className="page1">
                 <div className="image">
@@ -244,14 +264,14 @@ export default function Home() {
                 <h1> Our Products</h1>
                 <div className="cardcontainerss">
                     <div className="here"> 
-                        {back.map((todo, index)=>{
+                        {products.map((todo, index)=>{
                             return( <Card   
                                         key={index + 1}   
-                                        product_id = {index} 
-                                        image = {todo.image} 
+                                        product_id = {todo.id_produit} 
+                                        image = {todo.image_url} 
                                         description = {todo.description} 
-                                        productName={todo.productName} 
-                                        price={todo.price} 
+                                        productName={todo.nom} 
+                                        price={todo.prix} 
                                     />)
                         })}
 
@@ -279,12 +299,17 @@ export default function Home() {
                 style={{ cursor: 'pointer' }} id="profiles" className=" Profils">
                 <h1> our  profils</h1>
                 <div className="card_home">
-                    {cardData.map((card, index) => (
+                    {profs.map((card, index) => (
                         <NavLink style={{ textDecoration: 'none' , color: 'black' }}
                         key={index}
-                        to={`/my_profils?imgSrc=${encodeURIComponent(card.imgSrc)}&user_name=${encodeURIComponent(card.user_name)}&num_tlfn=${encodeURIComponent(card.num_tlfn)}&address=${encodeURIComponent(card.address)}`}
+                        to={`/my_profils?id=${encodeURIComponent(card.id)}`}
+                        // to={`/my_profils?id=${encodeURIComponent(card.id)}imgSrc=${encodeURIComponent(card.image_url)}&user_name=${encodeURIComponent(card.client.username)}&num_tlfn=${encodeURIComponent(card.client.telephone)}&address=${encodeURIComponent(card.localisation)}`}
                         >
-                            <CardH {...card} />
+                            <CardH 
+                            key={index + 1}   
+                            imgSrc = {card.image_url} 
+                            title = {card.client.username}
+                            description = {card.description_experience} />
                         </NavLink>
                     ))}
                 </div>

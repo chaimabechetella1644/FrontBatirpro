@@ -5,15 +5,10 @@ import './review.css'
 import emptystart from './images/emptystar.png'
 import fullstart from './images/fullstart.png'
 
-function Review({display}) {
-
-  const reviews = [
-  
-  ]
+function Review({display, reviews }) {
 
   const [showAll, setShowAll] = useState(false);
   const revlenght = reviews.length
- 
 
   const elements = showAll ? reviews : reviews.slice(0, 3);
   const voirplus = () => {
@@ -32,15 +27,15 @@ function Review({display}) {
             <div className="reviewcoor">
               <div className="coor">
                 <div className="nomreview">
-                  {review.nom} {review.prenom}
+                  {review.client.first_name} {review.client.last_name}
                 </div>
                 <div className="date">
-                  {review.periode}
+                  {review.date_avis}
                 </div>
               </div>
               <div className="rate">
               
-              {review.rate === 0 ? (
+              {review.note === 0 ? (
                 <>
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
@@ -48,7 +43,7 @@ function Review({display}) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.rate === 1 ? (
+              ) : review.note === 1 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={emptystart} alt="" />
@@ -56,7 +51,7 @@ function Review({display}) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.rate === 2 ? (
+              ) : review.note === 2 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={fullstart} alt="" />
@@ -64,7 +59,7 @@ function Review({display}) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.rate === 3 ? (
+              ) : review.note === 3 ? (
                 <>
                 <img src={fullstart} alt="" />
                 <img src={fullstart} alt="" />
@@ -72,7 +67,7 @@ function Review({display}) {
                 <img src={emptystart} alt="" />
                 <img src={emptystart} alt="" />
               </>
-              ) : review.rate === 4 ? (
+              ) : review.note === 4 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={fullstart} alt="" />
@@ -80,7 +75,7 @@ function Review({display}) {
                   <img src={fullstart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.rate === 5 ? (
+              ) : review.note === 5 ? (
                 <>
                 <img src={fullstart} alt="" />
                 <img src={fullstart} alt="" />
@@ -96,7 +91,7 @@ function Review({display}) {
               </div>
             </div>
             <div className="reviewtext">
-              {review.content}
+              {review.commentaire}
             </div>
           
           <div className="button" style={{display : (revlenght<= 2) ? 'none' : (index === elements.length - 1)? 'flex' : 'none'}} onClick={voirplus} >
