@@ -208,7 +208,6 @@ const [error, setError] = useState(null);
                         </div>
                     </div>
                 </div>
-{/* hna ybda l front */}
             </div>
             <div className="page1">
                 <div className="image">
