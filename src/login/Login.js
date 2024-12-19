@@ -29,17 +29,19 @@ const [credentials, setCredentials] = useState({
                 withCredentials: true 
               });
               
-              const token = response.data.token; // Get the token from response
+              const token = response.data.token; 
+              const user = response.data.user
               if (token) {
-                // Save the token in localStorage (or sessionStorage)
                 localStorage.setItem('authToken', token);
+                localStorage.setItem('user_type', response.data.usertype)
+                localStorage.setItem('profil_pic' , user.image_url)
                 navigate('/');
               }
             } catch (err) {
                 console.error(err);
                 setError(err.response?.data?.error || 'Login failed. Please try again.');
         } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false); 
     }
 };
 

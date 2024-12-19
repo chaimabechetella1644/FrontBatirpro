@@ -37,7 +37,8 @@ function App() {
           <Route path="/recrutement" element={<Recrutement />} />
           <Route path="/panier" element={<Panier />} />
           <Route path="/Cartdone" element={<Cartafterdone />} />
-          <Route path="/profiles" element={<Profiles />} />
+          {/*admin side*/}
+          <Route path="/profiles" element={<Profiles />} /> 
           <Route path="/products" element={<Products />} />
           <Route path='/' exact element={<Home/>} />
           <Route path='/profils' exact element={<Profils/>} />

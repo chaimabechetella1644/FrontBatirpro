@@ -118,3 +118,87 @@
         display: none;
     }
 }
+/* recherche */
+
+.inputs{
+    display: flex;
+    align-items: center;
+    gap: 38px;        
+    padding: 0 85px;
+
+}
+.nom{
+    display: flex;
+}
+.underNom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    z-index: 1;
+    width: 50px;
+}
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+    z-index: 1;
+    width: 90px;
+}
+
+.metier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+    z-index: 1;
+    width: 60px;
+}
+
+.nom input .metiers-dropdown {
+    background-color: var(--main-color2);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--main-secondcolor);
+    width: 150px; /* Set a consistent width for inputs */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.metiers-dropdown {
+    cursor: pointer;
+    appearance: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    appearance: none;
+    background-color: var(--main-color2);
+    border: 2px solid;
+    border-color: rgb(118, 118, 118);
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-secondcolor);
+    color: white;
+    padding: 8px; 
+    cursor: pointer;
+    border-radius: 4px; 
+    font-weight: bold;
+    width: 110px;
+}

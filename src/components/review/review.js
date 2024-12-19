@@ -35,7 +35,7 @@ function Review({display, reviews }) {
               </div>
               <div className="rate">
               
-              {review.note === 0 ? (
+              {Number(review.note) === 0 ? (
                 <>
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
@@ -43,7 +43,7 @@ function Review({display, reviews }) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.note === 1 ? (
+              ) : Number(review.note) === 1 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={emptystart} alt="" />
@@ -51,7 +51,7 @@ function Review({display, reviews }) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.note === 2 ? (
+              ) : Number(review.note) === 2 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={fullstart} alt="" />
@@ -59,7 +59,7 @@ function Review({display, reviews }) {
                   <img src={emptystart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.note === 3 ? (
+              ) : Number(review.note) === 3 ? (
                 <>
                 <img src={fullstart} alt="" />
                 <img src={fullstart} alt="" />
@@ -67,7 +67,7 @@ function Review({display, reviews }) {
                 <img src={emptystart} alt="" />
                 <img src={emptystart} alt="" />
               </>
-              ) : review.note === 4 ? (
+              ) : Number(review.note) === 4 ? (
                 <>
                   <img src={fullstart} alt="" />
                   <img src={fullstart} alt="" />
@@ -75,7 +75,7 @@ function Review({display, reviews }) {
                   <img src={fullstart} alt="" />
                   <img src={emptystart} alt="" />
                 </>
-              ) : review.note === 5 ? (
+              ) : Number(review.note) === 5 ? (
                 <>
                 <img src={fullstart} alt="" />
                 <img src={fullstart} alt="" />

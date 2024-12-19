@@ -42,6 +42,10 @@
 .formcontainer .rateadd .noter{
     color: white;
 }
+.logwarning{
+    color: rgb(245, 244, 242);
+    font-family: 'Poppins', sans-serif;
+}
 .buttonadd {
     cursor: pointer;
     border-radius: 12px;

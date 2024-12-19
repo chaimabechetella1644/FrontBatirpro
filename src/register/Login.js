@@ -7,7 +7,7 @@ import axios from 'axios';
 
 export default function Register() {
 const [credentials, setCredentials ] = useState({
-    userName : '',
+    username : '',
     password : '',
     email    :''
 })
@@ -17,10 +17,11 @@ console.log(credentials);
 const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    const response = await axios.post('http://127.0.0.1:8000/api/check/', credentials,{
+    const response = await axios.post('http://127.0.0.1:8000/api/register/', credentials,{
         headers: {
             "Content-Type": "application/json",
         },
+        withCredentials: true 
     });
         console.log(response.data); 
     } catch (error) {
@@ -39,7 +40,7 @@ return (
                     register
                 </div>
                 <div className='logininputs'>
-                    <input type="text" required name="userName" placeholder='UserName' onChange={(e)=>{setCredentials({...credentials, userName : e.target.value})}} />
+                    <input type="text" required name="username" placeholder='Username' onChange={(e)=>{setCredentials({...credentials, username : e.target.value})}} />
                     <input type="password" required name="password" placeholder='Password' onChange={(e)=>{setCredentials({...credentials, password : e.target.value})}} />
                     <input type="emai" required name="email" placeholder='email' onChange={(e)=>{setCredentials({...credentials, email : e.target.value})}} />
                 </div>

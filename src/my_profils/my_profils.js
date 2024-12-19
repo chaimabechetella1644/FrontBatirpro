@@ -126,7 +126,10 @@ export function My_Profils() {
                 <button>
                     <NavLink
                         style={{ textDecoration: 'none', color: 'white' }}
-                        to="/hireInfo"
+                        to={{
+                            pathname: "/hireInfo",
+                            state: { prof_id: id_prof}
+                        }}
                     >
                         Hire Now
                     </NavLink>
@@ -154,7 +157,7 @@ export function My_Profils() {
                             <hr style={style} className="transition-hr" />
                             <div className="content">
                                 <Review display={diplay} reviews={reviews} />
-                                <Addreview display={diplay} />
+                                <Addreview display={diplay} prof_id = {id_prof} />
                             </div>
                         </div>
                     </div>

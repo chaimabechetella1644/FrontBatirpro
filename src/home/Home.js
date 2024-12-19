@@ -26,19 +26,21 @@ import axios from "axios";
 
 export default function Home() {
 
-        const navigate = useNavigate();
-    
-        const handleRedirectPanier = () => {
-            navigate('/panier');
-        };
+    const [products, setProducts] = useState([]);
+    const [profs, setProfs] = useState([]);
+    const [loading, setLoading] = useState(true); // State to handle loading
+    const [error, setError] = useState(null);
+    const [isloggedIn, setIsLoggedIn] = useState([]);
+    const [profil_pic, setProfilPic] = useState([]);
 
-        const handleRedirectFavoris = () => {
-            navigate('/favoris');
-        };
-
-        const handleRedirectMains = () => {
-            navigate('/profils');
-        };
+        useEffect(() => {
+            const token = localStorage.getItem('authToken');
+            const profilePicture = localStorage.getItem('profil_pic');
+            if (token) {
+                setIsLoggedIn(true);
+                setProfilPic(profilePicture);
+            }
+        }, []);
 
         const handleRedirectProfils = (imgSrc, user_name, num_tlfn, address, description) => {
             navigate('/my_profils', {
@@ -51,12 +53,7 @@ export default function Home() {
                 },
             });
         };
-    
-// geting the products and profils when the page is loaded
-const [products, setProducts] = useState([]);
-const [profs, setProfs] = useState([]);
-const [loading, setLoading] = useState(true); // State to handle loading
-const [error, setError] = useState(null);
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -109,67 +106,19 @@ const [error, setError] = useState(null);
         }
     ];
 
+    const navigate = useNavigate();
+    
+        const handleRedirectPanier = () => {
+            navigate('/panier');
+        };
 
+        const handleRedirectFavoris = () => {
+            navigate('/favoris');
+        };
 
-    // const cardData = [
-    //     {
-    //         imgSrc: card_image,
-    //         user_name: "bouhafs imane",
-    //         num_tlfn: "062695753",
-    //         address: 'bejaia',
-    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
-    //     },
-    //     {
-    //         imgSrc: card_image,
-    //         user_name: "bouhafs imane",
-    //         num_tlfn: "062695753",
-    //         address: 'bejaia',
-    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
-    //     },
-    //     {
-    //         imgSrc: card_image,
-    //         user_name: "Ganoun Dihia",
-    //         num_tlfn: "062695753",
-    //         address: 'bejaia',
-    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
-    //     },
-    //     {
-    //         imgSrc: card_image,
-    //         user_name: "Ganoun Dihia",
-    //         num_tlfn: "062695753",
-    //         address: 'bejaia',
-    //         description: "Je suis un constructeur de chantier, responsable de la coordination."
-    //     },
-    // ];
-
-
-    // const back = [
-    //     {
-    //         image : image ,
-    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    //         productName: 'Brique',
-    //         price : '100 '
-    //     },
-    //     {
-    //         image : image ,
-    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    //         productName: 'Brique',
-    //         price : '100 '
-    //     },
-    //     {
-    //         image : image ,
-    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    //         productName: 'Brique',
-    //         price : '100 '
-    //     },
-    //     {
-    //         image : image ,
-    //         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    //         productName: 'Brique',
-    //         price : '100 '
-    //     }
-    // ]
-
+        const handleRedirectMains = () => {
+            navigate('/profils');
+        };
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -183,6 +132,13 @@ const [error, setError] = useState(null);
     function handleMarket(){
         navigate('/offers');
     }
+    const handleLogout = () => {
+        localStorage.removeItem('authToken'); 
+        localStorage.removeItem('profil_pic'); 
+        localStorage.removeItem('usertype'); 
+        setIsLoggedIn(false); 
+        navigate('/'); 
+    };
 
     return(
         <div className="Home">
@@ -199,13 +155,36 @@ const [error, setError] = useState(null);
                             <li onClick={() => scrollToSection('profiles')}>Profiles</li>
                             <li onClick={() => scrollToSection('why-us')}>Why Us</li>
                         </ul>
-                        <button onClick={()=>{navigate('/login')}} >connecter</button>
                         <div className="icons">
                             <div onClick={handleRedirectPanier} style={{ cursor: 'pointer' }}>
                                 <img src={panier} alt="Panier" />
                             </div>
                             <div onClick={handleRedirectFavoris} style={{ cursor: 'pointer' }}> <img src={favoris}  /></div>
                         </div>
+                        {isloggedIn ? (
+                        <>
+                            <button onClick={handleLogout}>Logout</button>
+                            <div className="profile-icon">
+                                <img
+                                    src={profil_pic|| 'default-avatar.png'} // Fallback image
+                                    alt="Profile"
+                                    style={{
+                                        borderRadius: '50%',
+                                        width: '34px',
+                                        height: '32px',
+                                        objectFit: 'cover',
+                                        position: 'absolute',
+                                        top: '2px',
+                                        right: '5px',
+                                        cursor: 'pointer',
+                                        border: '2px solid #EA5501',
+                                    }}
+                                />
+                            </div>
+                        </>
+                    ) : (
+                        <button onClick={() => navigate('/login')}>Connect</button>
+                    )}
                     </div>
                 </div>
             </div>
@@ -307,7 +286,7 @@ const [error, setError] = useState(null);
                             <CardH 
                             key={index + 1}   
                             imgSrc = {card.image_url} 
-                            title = {card.client.username}
+                            title = {card.client.first_name + ' ' +card.client.last_name}
                             description = {card.description_experience} />
                         </NavLink>
                     ))}
